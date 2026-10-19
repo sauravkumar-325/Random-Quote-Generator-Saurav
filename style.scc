@@ -1,0 +1,159 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2, #c471ed);
+}
+
+.quote-box {
+    width: 100%;
+    max-width: 650px;
+    padding: 40px 30px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.96);
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    animation: appear 0.5s ease;
+}
+
+h1 {
+    font-size: 30px;
+    color: #34265b;
+    margin-bottom: 28px;
+}
+
+#quote {
+    font-size: 23px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#author {
+    font-size: 17px;
+    color: #7651b5;
+    margin-bottom: 28px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.buttons button {
+    padding: 12px 17px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: #667eea;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.buttons button:hover {
+    transform: translateY(-3px);
+    background: #5145cd;
+}
+
+#favoriteQuote {
+    background: #e85d75;
+}
+
+#favoriteQuote:hover {
+    background: #d63d5d;
+}
+
+#showFavorites {
+    background: #34304f;
+}
+
+#message {
+    min-height: 20px;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #4b6b35;
+}
+
+#favoritesSection {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+
+#favoritesSection h2 {
+    color: #34265b;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.favorite-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.favorite-item p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.favorite-item button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 7px;
+    background: #d9534f;
+    color: white;
+    cursor: pointer;
+}
+
+.favorite-item button:hover {
+    background: #bd3632;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-box {
+        padding: 28px 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #quote {
+        font-size: 19px;
+    }
+
+    .buttons button {
+        flex: 1 1 42%;
+    }
+}
